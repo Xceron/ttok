@@ -124,8 +124,11 @@ import tiktoken
 output = []
 for key, value in tiktoken.model.MODEL_TO_ENCODING.items():
     output.append("- `{}` (`{}`)".format(key, value))
+for key, value in tiktoken.model.MODEL_PREFIX_TO_ENCODING.items():
+    output.append("- `{}` (`{}`)".format(key, value))
 cog.out("\n".join(output))
 ]]] -->
+- `gpt-4o` (`o200k_base`)
 - `gpt-4` (`cl100k_base`)
 - `gpt-3.5-turbo` (`cl100k_base`)
 - `gpt-3.5` (`cl100k_base`)
@@ -165,6 +168,16 @@ cog.out("\n".join(output))
 - `code-search-ada-code-001` (`r50k_base`)
 - `gpt2` (`gpt2`)
 - `gpt-2` (`gpt2`)
+- `o1-` (`o200k_base`)
+- `chatgpt-4o-` (`o200k_base`)
+- `gpt-4o-` (`o200k_base`)
+- `gpt-4-` (`cl100k_base`)
+- `gpt-3.5-turbo-` (`cl100k_base`)
+- `gpt-35-turbo-` (`cl100k_base`)
+- `ft:gpt-4` (`cl100k_base`)
+- `ft:gpt-3.5-turbo` (`cl100k_base`)
+- `ft:davinci-002` (`cl100k_base`)
+- `ft:babbage-002` (`cl100k_base`)
 <!-- [[[end]]] -->
 
 ## ttok --help
